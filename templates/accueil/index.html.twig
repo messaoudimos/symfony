@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AccueilController!{% endblock %}
+
+{% block body %}
+<h1 class="text-center pt-5"> Bienvenue dans mon application de gestion</h1>
+<ul>
+{%  for leNom in lesNoms %}
+<li>{{leNom}}</li>
+{% endfor %}
+{% if Age > 18%}
+Vous êtes majeur
+{% else %}
+vous êtes mineur
+{% endif %}
+</ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+.avatar{
+border-radius: 50%;
+}
+
+.imageCategoies{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.list-group-item{
+    font-size: 0.9em;
+}
