@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategorieController!{% endblock %}
+
+{% block body %}
+    <div class = "row ">
+
+    {# {{dump(lescontacts)}} #}
+        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 text-center " style = "width : 100%;  margin-top : 20px">
+            <div class="card mb-3 bg-warning">
+                <h4 class="card-title text-center">{{lacategorie.libelle}}</h4>
+                <img style="height: auto; max-width: 200px; display: block" src="{{lacategorie.image}}" class="avatar mx-auto my-3" alt="image avatar">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{lacategorie.description}}</li>
+                </ul>
+            </div> 
+                <a href="{{path('categories')}}" class = "btn btn-primary text-center w-100%">Revenir à la liste des catégories</a>   
+        </div>  
+
+
+{% endblock %}

@@ -10,3 +10,8 @@ border-radius: 50%;
 .list-group-item{
     font-size: 0.9em;
 }
+body{
+    background-image: url(../asset/images/bg2.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

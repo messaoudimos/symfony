@@ -3,11 +3,9 @@
 {% block title %}Hello ContactController!{% endblock %}
 
 {% block body %}
-<h1 class =  "text-center pt-3">Liste des contacts</h1>
-<div class = "row">
-    {% for lecontact in lescontacts %}
-    {# {{dump(lescontacts)}} #}
-        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
+<h1 class =  "text-center pt-3">un contact</h1>
+<div class = "row" >
+        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 text-center" style = "width : 100%">
             <div class="card mb-3">
                 <h4 class="card-title text-center">{{lecontact.nom}} {{lecontact.prenom}}</h4>
                 <img style="height: auto; max-width: 200px; display: block;" src="{{lecontact.avatar}}" class="avatar mx-auto my-3" alt="image avatar">
@@ -23,16 +21,14 @@
                             <span class='badge text-bg-warning'>Femme</span>
                         {% endif %}
                     </li>
+                    <li class="list-group-item">{{lecontact.categorie.libelle}} </li>
+                    <a href="{{path('fichecategorie', {'id':lecontact.categorie.id})}}" class = "btn btn-secondary text-center w-100%">Details</a>   
 
-                    <a href="{{path('fichecategorie', {'id':lecontact.categorie.id})}}" class="list-group-item">
-                    {{lecontact.categorie.libelle}}
-                    </a>   
 
                 </ul>
-                <a href="{{path('ficheContact', {'id': lecontact.id})}}" class = "btn btn-secondary text-center w-100%">Details</a>   
-
-            </div> 
-        </div>    
-    {% endfor %}
+            </div>    
+        </div> 
 </div>
+        <a href="{{path('contacts')}}" class = "btn btn-primary text-center w-25">Revenir à la liste</a>   
+
 {% endblock %}
