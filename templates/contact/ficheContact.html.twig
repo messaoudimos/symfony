@@ -6,27 +6,8 @@
 <h1 class =  "text-center pt-3">un contact</h1>
 <div class = "row" >
         <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 text-center" style = "width : 100%">
-            <div class="card mb-3">
-                <h4 class="card-title text-center">{{lecontact.nom}} {{lecontact.prenom}}</h4>
-                <img style="height: auto; max-width: 200px; display: block;" src="{{lecontact.avatar}}" class="avatar mx-auto my-3" alt="image avatar">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{{lecontact.rue}}</li>
-                    <li class="list-group-item">{{lecontact.cp}}</li>
-                    <li class="list-group-item">{{lecontact.ville}}</li>
-                    <li class="list-group-item">{{lecontact.mail}}</li>
-                    <li class="list-group-item">
-                        {% if lecontact.sex ==0 %}
-                            <span class='badge text-bg-info'>Homme</span>
-                        {% else %}
-                            <span class='badge text-bg-warning'>Femme</span>
-                        {% endif %}
-                    </li>
-                    <li class="list-group-item">{{lecontact.categorie.libelle}} </li>
-                    <a href="{{path('fichecategorie', {'id':lecontact.categorie.id})}}" class = "btn btn-secondary text-center w-100%">Details</a>   
-
-
-                </ul>
-            </div>    
+            {{include('contact/_card.html.twig', {'mode':'ficheContacts'})}}
+    
         </div> 
 </div>
         <a href="{{path('contacts')}}" class = "btn btn-primary text-center w-25">Revenir à la liste</a>   

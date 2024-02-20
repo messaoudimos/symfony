@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class CategorieController extends AbstractController
 {
     /**
-     * @Route("/categorie", name="categories", methods = {"GET"})
+     * @Route("/categories", name="categories", methods = {"GET"})
      */
     public function listCategorie(CategorieRepository $repo): Response
     {
